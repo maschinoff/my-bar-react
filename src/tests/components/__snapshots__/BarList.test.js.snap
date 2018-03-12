@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render barList with data correctly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-desktop"
+    >
+      Drink
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Data
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <DrinkListItem
+      aged={12}
+      alc={5.6}
+      bestBefore={10368000000}
+      bottledAt={-126230400000}
+      boughtAt={-31536000000}
+      category="Beer"
+      description=""
+      id="sdfsdf"
+      key="sdfsdf"
+      price={450}
+      title="My bottle"
+      vol={0.5}
+    />
+    <DrinkListItem
+      aged={12}
+      alc={42}
+      bestBefore={10368000000}
+      bottledAt={-126230400000}
+      boughtAt={-31536000000}
+      category="Whisky"
+      description=""
+      id="sdfsd2341f"
+      key="sdfsd2341f"
+      price={4500}
+      title="My bottle II"
+      vol={0.7}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render barList with empty drinks correctly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-desktop"
+    >
+      Drink
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Data
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        Your bar is totally empty!
+      </span>
+    </div>
+  </div>
+</div>
+`;

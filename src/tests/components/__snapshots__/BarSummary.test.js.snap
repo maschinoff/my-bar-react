@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BarSummary with multiple records correctly 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      You have total 
+      <span>
+        123
+      </span>
+       
+      bottles
+       in your bar.
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Drink
+      </Link>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render BarSummary with one record correctly 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      You have total 
+      <span>
+        1
+      </span>
+       
+      bottle
+       in your bar.
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Drink
+      </Link>
+    </div>
+  </div>
+</div>
+`;

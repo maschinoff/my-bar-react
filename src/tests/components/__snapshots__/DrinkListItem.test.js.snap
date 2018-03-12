@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render single item correctly 1`] = `
+<div>
+  <Link
+    className="list-item"
+    replace={false}
+    to="/view/sdfsd2341f"
+  >
+    <div>
+      My bottle II
+      <br />
+      Whisky
+       - 
+      0.7
+      L
+    </div>
+    <ul>
+      <li>
+        42
+        %
+      </li>
+      <li>
+        $45.00
+      </li>
+      <li>
+        Age: 
+        12
+      </li>
+    </ul>
+    <ul>
+      <li>
+        Bought: 
+        January 1st, 1969
+      </li>
+      <li>
+        Bottled: 
+        January 1st, 1966
+      </li>
+      <li>
+        BBF: 
+        May 1st, 1970
+      </li>
+    </ul>
+  </Link>
+</div>
+`;

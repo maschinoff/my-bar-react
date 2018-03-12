@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render footer correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="footer__content"
+    >
+      <div>
+        Copyright © 
+        1970
+         by 
+        <a
+          href="http://www.maschinov.pp.ua"
+          target="blank"
+        >
+          Maschinoff
+        </a>
+      </div>
+      <Link
+        replace={false}
+        to="/help"
+      >
+        Help
+      </Link>
+    </div>
+  </div>
+</footer>
+`;

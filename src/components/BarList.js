@@ -13,7 +13,7 @@ export const BarList = (props) => (
             {
                 props.drinks.length === 0 ? (
                     <div className="list-item list-item--message">
-                        <span>Your bar is totaly empty!</span>
+                        <span>Your bar is totally empty!</span>
                     </div>
                 ) : (
                     props.drinks.map((drink) => (

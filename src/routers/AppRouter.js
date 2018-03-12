@@ -6,6 +6,8 @@ import createHistory from 'history/createBrowserHistory';
 import LoginPage from '../components/LoginPage';
 import DashboardPage from '../components/DashboardPage';
 
+import AddDrinkPage from '../components/AddDrinkPage';
+
 import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
 
@@ -20,6 +22,7 @@ export const AppRouter = () => (
             <Switch>
                 <PublicRoute exact path="/" component={LoginPage} />
                 <PrivateRoute path="/dashboard" component={DashboardPage} />
+                <PrivateRoute path="/create" component={AddDrinkPage} />
                 <Route path="/help" component={HelpPage} />
                 <Route component={NotFoundPage} />
             </Switch>

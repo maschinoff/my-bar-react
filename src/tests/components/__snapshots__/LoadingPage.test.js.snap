@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Loading correctly 1`] = `
+<div
+  className="mask"
+>
+  <div
+    id="main_loader"
+  >
+    <div
+      className="spinner"
+    >
+      <div
+        className="bounce1"
+      />
+      <div
+        className="bounce2"
+      />
+      <div
+        className="bounce3"
+      />
+      <div
+        className="bounce4"
+      />
+      <div
+        className="bounce5"
+      />
+      <div
+        className="bounce6"
+      />
+    </div>
+  </div>
+</div>
+`;
