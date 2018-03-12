@@ -1,0 +1,12 @@
+.footer {
+  font-size: $font-size-small;
+  background: lighten($dark-blue, 20%);
+  flex-shrink: 0;
+}
+
+.footer__content{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size 0;
+}
