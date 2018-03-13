@@ -28,11 +28,14 @@ exports[`should render barList with data correctly 1`] = `
       bottledAt={-126230400000}
       boughtAt={-31536000000}
       category="Beer"
+      createdAt={0}
       description=""
       id="sdfsdf"
+      isEmpty={false}
       key="sdfsdf"
       price={450}
       title="My bottle"
+      updatedAt={0}
       vol={0.5}
     />
     <DrinkListItem
@@ -42,11 +45,14 @@ exports[`should render barList with data correctly 1`] = `
       bottledAt={-126230400000}
       boughtAt={-31536000000}
       category="Whisky"
+      createdAt={0}
       description=""
       id="sdfsd2341f"
+      isEmpty={false}
       key="sdfsd2341f"
       price={4500}
       title="My bottle II"
+      updatedAt={0}
       vol={0.7}
     />
   </div>

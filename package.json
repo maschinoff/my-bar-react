@@ -35,10 +35,10 @@
     "normalize.css": "7.0.0",
     "numeral": "2.0.6",
     "raf": "3.3.2",
-    "react": "16.0.0",
+    "react": "16.2.0",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.3.0",
-    "react-dom": "16.0.0",
+    "react-dom": "16.2.0",
     "react-modal": "2.2.2",
     "react-redux": "5.0.5",
     "react-router-dom": "4.2.2",
@@ -57,7 +57,7 @@
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
     "jest": "20.0.4",
-    "react-test-renderer": "16.0.0",
+    "react-test-renderer": "16.2.0",
     "redux-mock-store": "1.2.3",
     "webpack-dev-server": "2.5.1"
   }

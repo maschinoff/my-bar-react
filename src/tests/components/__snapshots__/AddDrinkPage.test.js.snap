@@ -20,7 +20,26 @@ exports[`should render AddDrinkPage correctly 1`] = `
   >
     <DrinkForm
       actionTitle="Add Bottle"
+      categories={
+        Array [
+          "Beer",
+          "Whisky",
+        ]
+      }
       onSubmit={[Function]}
+      options={
+        Object {
+          "validate": false,
+        }
+      }
+      vol={
+        Array [
+          0.33,
+          0.5,
+          0.7,
+          1,
+        ]
+      }
     />
   </div>
 </div>

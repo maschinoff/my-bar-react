@@ -10,9 +10,12 @@ export default [
         price: 450,
         aged: 12,
         description: '',
+        isEmpty: false,
         boughtAt: moment(0).subtract(1, 'year').valueOf(),
         bottledAt: moment(0).subtract(4, 'year').valueOf(),
         bestBefore: moment(0).add(4, 'months').valueOf(),
+        createdAt: moment().valueOf(),
+        updatedAt: moment().valueOf()
     },
     {
         id: 'sdfsd2341f',
@@ -23,8 +26,11 @@ export default [
         price: 4500,
         aged: 12,
         description: '',
+        isEmpty: false,
         boughtAt: moment(0).subtract(1, 'year').valueOf(),
         bottledAt: moment(0).subtract(4, 'year').valueOf(),
         bestBefore: moment(0).add(4, 'months').valueOf(),
+        createdAt: moment().valueOf(),
+        updatedAt: moment().valueOf()
     }
 ];

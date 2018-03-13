@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import DrinkForm from '../components/DrinkForm';
+import { startAddDrink } from '../actions/drinks';
 
 export class AddDrinkPage extends React.Component {
     onSubmit = (drink) => {
@@ -20,15 +21,16 @@ export class AddDrinkPage extends React.Component {
                     <DrinkForm
                         actionTitle='Add Bottle'
                         onSubmit={this.onSubmit}
+                        options={{validate: false}}
                     />
                 </div>
             </div>
-        );
+        )
     }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    startAddDrink: (drink) => {return true}
+    startAddDrink: (drink) => dispatch(startAddDrink(drink))
 });
 
-export default connect(undefined, mapDispatchToProps())(AddDrinkPage);
+export default connect(undefined, mapDispatchToProps)(AddDrinkPage);
