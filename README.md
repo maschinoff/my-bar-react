@@ -1,7 +1,9 @@
 # My Bar
 **My Bar** is a applications developed with **React, Express and Firebase**. 
 
-It allows to manage your bar.
+It allows you to easily manage your bar.
+
+Application was developed to practise with React and Firebase development workflow.
 
 ## Prerequisites
 The following list of tools that must be installed localy to run Portal:
