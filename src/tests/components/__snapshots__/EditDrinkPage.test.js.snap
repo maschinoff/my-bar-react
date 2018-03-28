@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render edit page correctly 1`] = `
+<div>
+  <div>
+    <div
+      className="page-header"
+    >
+      <div
+        className="content-container"
+      >
+        <h1
+          className="page-header__title"
+        >
+          Edit Drink
+        </h1>
+      </div>
+    </div>
+    <div
+      className="content-container"
+    >
+      <DrinkForm
+        actionTitle="Save"
+        categories={
+          Array [
+            "Beer",
+            "Whisky",
+          ]
+        }
+        drink={
+          Object {
+            "aged": 12,
+            "alc": 42,
+            "bestBefore": 10368000000,
+            "bottledAt": -126230400000,
+            "boughtAt": -31536000000,
+            "category": "Whisky",
+            "createdAt": 0,
+            "description": "",
+            "id": "sdfsd2341f",
+            "isEmpty": false,
+            "price": 4500,
+            "title": "My bottle II",
+            "updatedAt": 0,
+            "vol": 0.7,
+          }
+        }
+        onSubmit={[Function]}
+        options={
+          Object {
+            "validate": false,
+          }
+        }
+        vol={
+          Array [
+            0.33,
+            0.5,
+            0.7,
+            1,
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render edit page with invalid id correctly 1`] = `
+<div>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Record with 
+      <span>
+        id:
+        123
+      </span>
+       not found!
+    </h1>
+  </div>
+</div>
+`;

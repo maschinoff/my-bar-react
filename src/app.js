@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter'
 import configureStore from './store/configureStore';
 import { login, logout } from './actions/auth';
+import { startSetDrinks } from './actions/drinks';
 import LoadingPage from './components/LoadingPage';
 
 import { firebase } from './firebase/firebase';
@@ -35,10 +36,11 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
     if(user){
         store.dispatch(login(user.uid));
+        store.dispatch(startSetDrinks());
         renderApp();
         if(history.location.pathname === '/'){
-            history.push('/dashboard')
-        }
+                history.push('/dashboard');
+        };
     }
     else{
         store.dispatch(logout());

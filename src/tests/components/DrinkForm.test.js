@@ -51,14 +51,6 @@ test('should handle onSubmit with correct filled form', () => {
     });
 });
 
-test('should set title on input change', () => {
-
-});
-
-test('should set category on select change', () => {
-
-});
-
 test('should set state on select change', () => {
     const value = 'whisky';
     const wrapper = shallow(<DrinkForm />);

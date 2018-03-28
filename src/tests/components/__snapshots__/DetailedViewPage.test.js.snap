@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render detailed view correctly 1`] = `
+<div
+  className="content-container"
+>
+  <div>
+    <h1>
+      My bottle II
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/edit/sdfsd2341f"
+      >
+        Edit
+      </Link>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render detailed view with incorrect id correctly 1`] = `
+<div
+  className="content-container"
+>
+  <h1
+    className="page-header__title"
+  >
+    Record with 
+    <span>
+      id:
+      123
+    </span>
+     not found!
+  </h1>
+</div>
+`;
