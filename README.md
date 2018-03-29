@@ -56,5 +56,6 @@ FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 * View list of all drink (resolved)
 * Detailed view (resolved)
 * Confirmation on delete
+###Q2 2018
 * Sort by categories
 * Sort by best before 
