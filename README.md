@@ -49,13 +49,13 @@ FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 ### Heroku Deployment
 
 ## Roadmap
-###Q1 2018
+### Q1 2018
 * Add new drink (resolved)
 * Edit existing drinks (resolved)
 * Delete existing drinks (resolved)
 * View list of all drink (resolved)
 * Detailed view (resolved)
 * Confirmation on delete
-###Q2 2018
+### Q2 2018
 * Sort by categories
 * Sort by best before 
