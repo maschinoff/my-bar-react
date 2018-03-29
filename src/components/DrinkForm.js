@@ -15,6 +15,7 @@ export class DrinkForm extends React.Component {
             aged: props.drink ? props.drink.aged : '',
             description: props.drink ? props.drink.description : '',
             isEmpty: props.drink ? props.drink.isEmpty : false,
+            isOpen: props.drink ? props.drink.isEmpty : false,
             boughtAt: props.drink ? moment(props.drink.boughtAt) : null,
             bottledAt: props.drink ? moment(props.drink.bottledAt) : null,
             bestBefore: props.drink ? moment(props.drink.bestBefore) : null,
@@ -56,23 +57,24 @@ export class DrinkForm extends React.Component {
                 category: this.state.category,
                 vol: this.state.vol,
                 alc: this.state.alc,
-                price: parseFloat(this.state.price, 10) * 100,
+                price: this.state.price ? parseFloat(this.state.price, 10) * 100 : '',
                 aged: this.state.aged,
                 description: this.state.description,
                 isEmpty: this.state.isEmpty,
+                isOpen: this.state.isOpen,
                 boughtAt: this.state.boughtAt.valueOf(),
                 bottledAt: this.state.bottledAt.valueOf(),
                 bestBefore: this.state.bestBefore.valueOf(),
                 createdAt: this.state.createdAt.valueOf(),
                 updatedAt: moment().valueOf()
             });
+            console.log(this.state.price);
         }
     };
     validate = () => {
         let errors = [];
 
         if(this.props.options.validate) {
-
 
             if (!this.state.title) {
                 errors.push('Please provide a title');
@@ -94,6 +96,7 @@ export class DrinkForm extends React.Component {
                 errors.push('Please provide a price');
             }
         }
+
         if (!errors.length)
             return true;
         else

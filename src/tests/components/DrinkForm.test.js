@@ -43,6 +43,7 @@ test('should handle onSubmit with correct filled form', () => {
         aged: drinks[0].aged,
         description: drinks[0].description,
         isEmpty: drinks[0].isEmpty,
+        isOpen: drinks[0].isOpen,
         boughtAt: drinks[0].boughtAt,
         bottledAt: drinks[0].bottledAt,
         bestBefore: drinks[0].bestBefore,

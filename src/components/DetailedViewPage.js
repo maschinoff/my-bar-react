@@ -10,14 +10,26 @@ export class DetailedView extends React.Component {
     }
     render(){
         return(
-            <div className="content-container">
+            <div>
                 {
                     this.props.drink ? (
                         <div>
-                            <h1>{ this.props.drink.title }</h1>
-                            <div className="page-header__actions">
-                                <Link className="button" to={`/edit/${this.props.drink.id}`}>Edit</Link>
-                                <button className="button" onClick={this.onRemove}>Delete</button>
+                            <div className="page-header">
+                                <div className="content-container">
+                                    <div className="page-header__actions">
+                                        <Link className="button" to={`/edit/${this.props.drink.id}`}>Edit</Link>
+                                        <button className="button" onClick={this.onRemove}>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="content-container">
+                                <h1>{ this.props.drink.title }</h1>
+                                <ul>
+                                    <li>{ this.props.drink.category }</li>
+                                    <li>{ this.props.drink.vol } L</li>
+                                    <li>{ this.props.drink.alc } %</li>
+                                    <li>{ this.props.drink.price }</li>
+                                </ul>
                             </div>
                         </div>
                     ) : (

@@ -21,7 +21,6 @@ export class AddDrinkPage extends React.Component {
                     <DrinkForm
                         actionTitle='Add Bottle'
                         onSubmit={this.onSubmit}
-                        options={{validate: false}}
                     />
                 </div>
             </div>

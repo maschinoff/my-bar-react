@@ -1,4 +1,5 @@
-import demoDrinks from '../tests/fixtures/drinks';
+import moment from 'moment/moment';
+import database from '../firebase/firebase';
 
 //ADD DRINK
 export const addDrink = (drink) => ({
@@ -6,10 +7,36 @@ export const addDrink = (drink) => ({
     drink
 });
 
-export const startAddDrink = (drink = {}) => {
+export const startAddDrink = (drinkData = {}) => {
     return (dispatch, getState) => {
-        drink.id = '123'+Date.now();
-        dispatch(addDrink(drink));
+        const {
+            title = '',
+            category = 'Undefined',
+            vol = '',
+            alc = '',
+            price = '',
+            aged = '',
+            description = '',
+            isEmpty = false,
+            isOpen = false,
+            boughtAt = 0,
+            bottledAt = 0,
+            bestBefore = 0,
+            createdAt = moment().valueOf(),
+            updatedAt = moment().valueOf()
+        } = drinkData;
+
+        const uid = getState().auth.uid;
+        const drink = {
+            title, category, vol, alc, price, aged, description, isEmpty, isOpen, boughtAt, bottledAt, bestBefore, createdAt, updatedAt
+        };
+
+        return database.ref(`users/${uid}/drinks`).push(drink).then((ref) => {
+            dispatch(addDrink({
+                id: ref.key,
+                ...drink
+            }));
+        });
     }
 };
 
@@ -22,7 +49,11 @@ export const editDrink = (id, updates) => ({
 
 export const startEditDrink = (id, updates) => {
     return (dispatch, getState) => {
-        dispatch(editDrink(id, updates));
+        const uid = getState().auth.uid;
+
+        return database.ref(`users/${uid}/drinks/${id}`).update(updates).then(() => {
+            dispatch(editDrink(id, updates));
+        });
     }
 };
 
@@ -34,7 +65,11 @@ export const removeDrink = ( { id } = {}) => ({
 
 export const startRemoveDrink = ( { id } = {}) => {
     return (dispatch, getState) => {
-        dispatch(removeDrink({ id }));
+        const uid = getState().auth.uid;
+
+        return database.ref(`users/${uid}/drinks/${id}`).remove().then(() => {
+            dispatch(removeDrink({ id }))
+        });
     }
 };
 
@@ -46,6 +81,20 @@ export const setDrinks = (drinks) => ({
 
 export const startSetDrinks = () => {
     return (dispatch, getState) => {
-        dispatch(setDrinks(demoDrinks));
+        const uid = getState().auth.uid;
+
+        return database.ref(`users/${uid}/drinks`).once('value').then((snapshot) => {
+           const drinks = [];
+
+           snapshot.forEach((childSnapshot) => {
+               drinks.push({
+                  id: childSnapshot.key,
+                   ...childSnapshot.val()
+               });
+           });
+
+           dispatch(setDrinks(drinks));
+        });
+
     }
 }

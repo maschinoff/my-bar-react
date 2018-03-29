@@ -37,9 +37,10 @@ exports[`should render edit page correctly 1`] = `
             "category": "Whisky",
             "createdAt": 0,
             "description": "",
-            "id": "sdfsd2341f",
+            "id": "whisky",
             "isEmpty": false,
-            "price": 4500,
+            "isOpen": true,
+            "price": "",
             "title": "My bottle II",
             "updatedAt": 0,
             "vol": 0.7,
@@ -48,7 +49,7 @@ exports[`should render edit page correctly 1`] = `
         onSubmit={[Function]}
         options={
           Object {
-            "validate": false,
+            "validate": true,
           }
         }
         vol={

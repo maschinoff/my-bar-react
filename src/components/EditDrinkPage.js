@@ -23,7 +23,6 @@ export class EditDrinkPage extends React.Component {
                                 <DrinkForm
                                     actionTitle='Save'
                                     onSubmit={this.onSubmit}
-                                    options={{validate: false}}
                                     drink={this.props.drink}
                                 />
                             </div>

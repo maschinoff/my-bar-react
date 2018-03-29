@@ -5,7 +5,7 @@ exports[`should render single item correctly 1`] = `
   <Link
     className="list-item"
     replace={false}
-    to="/view/sdfsd2341f"
+    to="/view/whisky"
   >
     <div>
       My bottle II
@@ -21,7 +21,7 @@ exports[`should render single item correctly 1`] = `
         %
       </li>
       <li>
-        $45.00
+        $0.00
       </li>
       <li>
         Age: 

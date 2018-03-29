@@ -84,7 +84,7 @@ test('should not edit drink with invalid id', () => {
 test('should remove a drink by id', () => {
     const action = {
         type: 'REMOVE_DRINK',
-        id: 'sdfsdf'
+        id: drinks[0].id
     }
 
     const state = drinksReducers(drinks, action);

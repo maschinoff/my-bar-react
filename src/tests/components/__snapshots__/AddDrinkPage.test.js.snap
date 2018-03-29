@@ -29,7 +29,7 @@ exports[`should render AddDrinkPage correctly 1`] = `
       onSubmit={[Function]}
       options={
         Object {
-          "validate": false,
+          "validate": true,
         }
       }
       vol={

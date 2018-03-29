@@ -1,38 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render detailed view correctly 1`] = `
-<div
-  className="content-container"
->
+<div>
   <div>
-    <h1>
-      My bottle II
-    </h1>
     <div
-      className="page-header__actions"
+      className="page-header"
     >
-      <Link
-        className="button"
-        replace={false}
-        to="/edit/sdfsd2341f"
+      <div
+        className="content-container"
       >
-        Edit
-      </Link>
-      <button
-        className="button"
-        onClick={[Function]}
-      >
-        Delete
-      </button>
+        <div
+          className="page-header__actions"
+        >
+          <Link
+            className="button"
+            replace={false}
+            to="/edit/whisky"
+          >
+            Edit
+          </Link>
+          <button
+            className="button"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="content-container"
+    >
+      <h1>
+        My bottle II
+      </h1>
+      <ul>
+        <li>
+          Whisky
+        </li>
+        <li>
+          0.7
+           L
+        </li>
+        <li>
+          42
+           %
+        </li>
+        <li />
+      </ul>
     </div>
   </div>
 </div>
 `;
 
 exports[`should render detailed view with incorrect id correctly 1`] = `
-<div
-  className="content-container"
->
+<div>
   <h1
     className="page-header__title"
   >

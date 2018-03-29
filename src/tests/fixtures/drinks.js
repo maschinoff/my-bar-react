@@ -2,15 +2,16 @@ import moment from 'moment';
 
 export default [
     {
-        id: 'sdfsdf',
+        id: 'beer',
         title: 'My bottle',
         category: 'Beer',
         vol: 0.5,
         alc: 5.6,
         price: 450,
-        aged: 12,
+        aged: 1,
         description: '',
         isEmpty: false,
+        isOpen: false,
         boughtAt: moment(0).subtract(1, 'year').valueOf(),
         bottledAt: moment(0).subtract(4, 'year').valueOf(),
         bestBefore: moment(0).add(4, 'months').valueOf(),
@@ -18,15 +19,16 @@ export default [
         updatedAt: moment().valueOf()
     },
     {
-        id: 'sdfsd2341f',
+        id: 'whisky',
         title: 'My bottle II',
         category: 'Whisky',
         vol: 0.7,
         alc: 42,
-        price: 4500,
+        price: '',
         aged: 12,
         description: '',
         isEmpty: false,
+        isOpen: true,
         boughtAt: moment(0).subtract(1, 'year').valueOf(),
         bottledAt: moment(0).subtract(4, 'year').valueOf(),
         bestBefore: moment(0).add(4, 'months').valueOf(),

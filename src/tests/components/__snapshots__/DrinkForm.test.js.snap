@@ -414,7 +414,7 @@ exports[`should render DrinkForm with data 1`] = `
     onChange={[Function]}
     placeholder="Specify aged of drink (optional)"
     type="text"
-    value={12}
+    value={1}
   />
   <textarea
     className="text-area"
