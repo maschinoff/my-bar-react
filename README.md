@@ -50,9 +50,11 @@ FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 
 ## Roadmap
 ###Q1 2018
-* Add new drink
-* Edit existing drinks
-* Delete existing drinks
-* View list of all drink
+* Add new drink (resolved)
+* Edit existing drinks (resolved)
+* Delete existing drinks (resolved)
+* View list of all drink (resolved)
+* Detailed view (resolved)
+* Confirmation on delete
 * Sort by categories
 * Sort by best before 
