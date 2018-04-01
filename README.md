@@ -40,13 +40,28 @@ FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 3. Run in terminal for development `yarn run dev-server`
 4. React Dev Server runs on **localhost:8080**
 #### Production Server  
-4. Run in terminal for production `yarn run build:prod` **-->** `yarn run server`
+3. Run in terminal for production `yarn run build:prod` **-->** `yarn run server`
 4. Your Prod Server runs on **localhost:8080**
 
 ### Tests
 1. Open a terminal and run `yarn test --watch`
 
 ### Heroku Deployment
+1. Login to heroku https://www.heroku.com/
+2. Install heroku CLI https://devcenter.heroku.com/articles/heroku-cli
+3. Login to heroku `heroku login`
+4. Create app `heroku create my-bar-react`
+5. Upload & build to heroku `git push heroku master`
+6. Setup heroku varialbles
+```
+heroku config:set FIREBASE_API_KEY=YOUR_API_KEY
+heroku config:set FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAI
+heroku config:set FIREBASE_DATABASE_URL=YOUR_DATABASE_URL
+heroku config:set FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+heroku config:set FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+heroku config:set FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
+```
+7. Run app `heroku open`
 
 ## Roadmap
 ### Q1 2018
