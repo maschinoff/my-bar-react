@@ -22,7 +22,24 @@ exports[`should render AddDrinkPage correctly 1`] = `
       actionTitle="Add Bottle"
       categories={
         Array [
+          "Absinthe",
           "Beer",
+          "Brandy",
+          "Cider",
+          "Gin",
+          "Horilka",
+          "Liqueurs",
+          "Mastika",
+          "Metaxa",
+          "Ouzo",
+          "Rakia",
+          "Slivovitz",
+          "Rum",
+          "Sparkling Wine",
+          "Tequila",
+          "Vodka",
+          "Vermouth",
+          "Wine",
           "Whisky",
         ]
       }
@@ -34,6 +51,7 @@ exports[`should render AddDrinkPage correctly 1`] = `
       }
       vol={
         Array [
+          0.25,
           0.33,
           0.5,
           0.7,

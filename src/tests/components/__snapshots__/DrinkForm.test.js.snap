@@ -24,10 +24,112 @@ exports[`should handle onSubmit with empty form 1`] = `
       -- Please select --
     </option>
     <option
+      key="Absinthe"
+      value="Absinthe"
+    >
+      Absinthe
+    </option>
+    <option
       key="Beer"
       value="Beer"
     >
       Beer
+    </option>
+    <option
+      key="Brandy"
+      value="Brandy"
+    >
+      Brandy
+    </option>
+    <option
+      key="Cider"
+      value="Cider"
+    >
+      Cider
+    </option>
+    <option
+      key="Gin"
+      value="Gin"
+    >
+      Gin
+    </option>
+    <option
+      key="Horilka"
+      value="Horilka"
+    >
+      Horilka
+    </option>
+    <option
+      key="Liqueurs"
+      value="Liqueurs"
+    >
+      Liqueurs
+    </option>
+    <option
+      key="Mastika"
+      value="Mastika"
+    >
+      Mastika
+    </option>
+    <option
+      key="Metaxa"
+      value="Metaxa"
+    >
+      Metaxa
+    </option>
+    <option
+      key="Ouzo"
+      value="Ouzo"
+    >
+      Ouzo
+    </option>
+    <option
+      key="Rakia"
+      value="Rakia"
+    >
+      Rakia
+    </option>
+    <option
+      key="Slivovitz"
+      value="Slivovitz"
+    >
+      Slivovitz
+    </option>
+    <option
+      key="Rum"
+      value="Rum"
+    >
+      Rum
+    </option>
+    <option
+      key="Sparkling Wine"
+      value="Sparkling Wine"
+    >
+      Sparkling Wine
+    </option>
+    <option
+      key="Tequila"
+      value="Tequila"
+    >
+      Tequila
+    </option>
+    <option
+      key="Vodka"
+      value="Vodka"
+    >
+      Vodka
+    </option>
+    <option
+      key="Vermouth"
+      value="Vermouth"
+    >
+      Vermouth
+    </option>
+    <option
+      key="Wine"
+      value="Wine"
+    >
+      Wine
     </option>
     <option
       key="Whisky"
@@ -45,6 +147,12 @@ exports[`should handle onSubmit with empty form 1`] = `
       value=""
     >
       -- Please select --
+    </option>
+    <option
+      key="0.25"
+      value={0.25}
+    >
+      0.25
     </option>
     <option
       key="0.33"
@@ -164,7 +272,7 @@ exports[`should handle onSubmit with empty form 1`] = `
     renderDay={null}
     renderMonth={null}
     reopenPickerOnClearDate={false}
-    required={true}
+    required={false}
     screenReaderInputMessage=""
     showClearDate={false}
     showDefaultInputIcon={false}
@@ -236,7 +344,7 @@ exports[`should handle onSubmit with empty form 1`] = `
     renderDay={null}
     renderMonth={null}
     reopenPickerOnClearDate={false}
-    required={true}
+    required={false}
     screenReaderInputMessage=""
     showClearDate={false}
     showDefaultInputIcon={false}
@@ -347,10 +455,112 @@ exports[`should render DrinkForm with data 1`] = `
       -- Please select --
     </option>
     <option
+      key="Absinthe"
+      value="Absinthe"
+    >
+      Absinthe
+    </option>
+    <option
       key="Beer"
       value="Beer"
     >
       Beer
+    </option>
+    <option
+      key="Brandy"
+      value="Brandy"
+    >
+      Brandy
+    </option>
+    <option
+      key="Cider"
+      value="Cider"
+    >
+      Cider
+    </option>
+    <option
+      key="Gin"
+      value="Gin"
+    >
+      Gin
+    </option>
+    <option
+      key="Horilka"
+      value="Horilka"
+    >
+      Horilka
+    </option>
+    <option
+      key="Liqueurs"
+      value="Liqueurs"
+    >
+      Liqueurs
+    </option>
+    <option
+      key="Mastika"
+      value="Mastika"
+    >
+      Mastika
+    </option>
+    <option
+      key="Metaxa"
+      value="Metaxa"
+    >
+      Metaxa
+    </option>
+    <option
+      key="Ouzo"
+      value="Ouzo"
+    >
+      Ouzo
+    </option>
+    <option
+      key="Rakia"
+      value="Rakia"
+    >
+      Rakia
+    </option>
+    <option
+      key="Slivovitz"
+      value="Slivovitz"
+    >
+      Slivovitz
+    </option>
+    <option
+      key="Rum"
+      value="Rum"
+    >
+      Rum
+    </option>
+    <option
+      key="Sparkling Wine"
+      value="Sparkling Wine"
+    >
+      Sparkling Wine
+    </option>
+    <option
+      key="Tequila"
+      value="Tequila"
+    >
+      Tequila
+    </option>
+    <option
+      key="Vodka"
+      value="Vodka"
+    >
+      Vodka
+    </option>
+    <option
+      key="Vermouth"
+      value="Vermouth"
+    >
+      Vermouth
+    </option>
+    <option
+      key="Wine"
+      value="Wine"
+    >
+      Wine
     </option>
     <option
       key="Whisky"
@@ -368,6 +578,12 @@ exports[`should render DrinkForm with data 1`] = `
       value=""
     >
       -- Please select --
+    </option>
+    <option
+      key="0.25"
+      value={0.25}
+    >
+      0.25
     </option>
     <option
       key="0.33"
@@ -487,7 +703,7 @@ exports[`should render DrinkForm with data 1`] = `
     renderDay={null}
     renderMonth={null}
     reopenPickerOnClearDate={false}
-    required={true}
+    required={false}
     screenReaderInputMessage=""
     showClearDate={false}
     showDefaultInputIcon={false}
@@ -559,7 +775,7 @@ exports[`should render DrinkForm with data 1`] = `
     renderDay={null}
     renderMonth={null}
     reopenPickerOnClearDate={false}
-    required={true}
+    required={false}
     screenReaderInputMessage=""
     showClearDate={false}
     showDefaultInputIcon={false}
@@ -670,10 +886,112 @@ exports[`should render empty DrinkForm correctly 1`] = `
       -- Please select --
     </option>
     <option
+      key="Absinthe"
+      value="Absinthe"
+    >
+      Absinthe
+    </option>
+    <option
       key="Beer"
       value="Beer"
     >
       Beer
+    </option>
+    <option
+      key="Brandy"
+      value="Brandy"
+    >
+      Brandy
+    </option>
+    <option
+      key="Cider"
+      value="Cider"
+    >
+      Cider
+    </option>
+    <option
+      key="Gin"
+      value="Gin"
+    >
+      Gin
+    </option>
+    <option
+      key="Horilka"
+      value="Horilka"
+    >
+      Horilka
+    </option>
+    <option
+      key="Liqueurs"
+      value="Liqueurs"
+    >
+      Liqueurs
+    </option>
+    <option
+      key="Mastika"
+      value="Mastika"
+    >
+      Mastika
+    </option>
+    <option
+      key="Metaxa"
+      value="Metaxa"
+    >
+      Metaxa
+    </option>
+    <option
+      key="Ouzo"
+      value="Ouzo"
+    >
+      Ouzo
+    </option>
+    <option
+      key="Rakia"
+      value="Rakia"
+    >
+      Rakia
+    </option>
+    <option
+      key="Slivovitz"
+      value="Slivovitz"
+    >
+      Slivovitz
+    </option>
+    <option
+      key="Rum"
+      value="Rum"
+    >
+      Rum
+    </option>
+    <option
+      key="Sparkling Wine"
+      value="Sparkling Wine"
+    >
+      Sparkling Wine
+    </option>
+    <option
+      key="Tequila"
+      value="Tequila"
+    >
+      Tequila
+    </option>
+    <option
+      key="Vodka"
+      value="Vodka"
+    >
+      Vodka
+    </option>
+    <option
+      key="Vermouth"
+      value="Vermouth"
+    >
+      Vermouth
+    </option>
+    <option
+      key="Wine"
+      value="Wine"
+    >
+      Wine
     </option>
     <option
       key="Whisky"
@@ -691,6 +1009,12 @@ exports[`should render empty DrinkForm correctly 1`] = `
       value=""
     >
       -- Please select --
+    </option>
+    <option
+      key="0.25"
+      value={0.25}
+    >
+      0.25
     </option>
     <option
       key="0.33"
@@ -810,7 +1134,7 @@ exports[`should render empty DrinkForm correctly 1`] = `
     renderDay={null}
     renderMonth={null}
     reopenPickerOnClearDate={false}
-    required={true}
+    required={false}
     screenReaderInputMessage=""
     showClearDate={false}
     showDefaultInputIcon={false}
@@ -882,7 +1206,7 @@ exports[`should render empty DrinkForm correctly 1`] = `
     renderDay={null}
     renderMonth={null}
     reopenPickerOnClearDate={false}
-    required={true}
+    required={false}
     screenReaderInputMessage=""
     showClearDate={false}
     showDefaultInputIcon={false}

@@ -16,8 +16,8 @@ export class DrinkForm extends React.Component {
             description: props.drink ? props.drink.description : '',
             isEmpty: props.drink ? props.drink.isEmpty : false,
             isOpen: props.drink ? props.drink.isEmpty : false,
-            boughtAt: props.drink ? moment(props.drink.boughtAt) : null,
-            bottledAt: props.drink ? moment(props.drink.bottledAt) : null,
+            boughtAt: (props.drink && props.drink.boughtAt) ? moment(props.drink.boughtAt) : null,
+            bottledAt: (props.drink && props.drink.bottledAt) ? moment(props.drink.bottledAt) : null,
             bestBefore: props.drink ? moment(props.drink.bestBefore) : null,
             createdAt: props.drink ? moment(props.drink.createdAt) : moment(),
             updatedAt: props.drink ? moment(props.drink.updatedAt) : null,
@@ -62,20 +62,18 @@ export class DrinkForm extends React.Component {
                 description: this.state.description,
                 isEmpty: this.state.isEmpty,
                 isOpen: this.state.isOpen,
-                boughtAt: this.state.boughtAt.valueOf(),
-                bottledAt: this.state.bottledAt.valueOf(),
+                boughtAt: this.state.boughtAt ? this.state.boughtAt.valueOf() : null,
+                bottledAt: this.state.bottledAt ? this.state.bottledAt.valueOf() : null,
                 bestBefore: this.state.bestBefore.valueOf(),
                 createdAt: this.state.createdAt.valueOf(),
                 updatedAt: moment().valueOf()
             });
-            console.log(this.state.price);
         }
     };
     validate = () => {
         let errors = [];
 
         if(this.props.options.validate) {
-
             if (!this.state.title) {
                 errors.push('Please provide a title');
             }
@@ -96,13 +94,11 @@ export class DrinkForm extends React.Component {
                 errors.push('Please provide a price');
             }
         }
-
         if (!errors.length)
             return true;
         else
             this.setState({errors})
     };
-
     render() {
         return (
             <form className="form" onSubmit={this.onSubmit}>
@@ -169,7 +165,7 @@ export class DrinkForm extends React.Component {
                 </textarea>
                 <SingleDatePicker
                     date={this.state.boughtAt}
-                    required={true}
+                    required={false}
                     placeholder="Bought date"
                     onDateChange={date => this.onCalendarDateChange(date, 'boughtAt')}
                     focused={this.state.calendarBoughtAtFocused}
@@ -179,7 +175,7 @@ export class DrinkForm extends React.Component {
                 />
                 <SingleDatePicker
                     date={this.state.bottledAt}
-                    required={true}
+                    required={false}
                     placeholder="Bottled date"
                     onDateChange={date => this.onCalendarDateChange(date, 'bottledAt')}
                     focused={this.state.calendarBottledAtFocused}
@@ -209,6 +205,32 @@ export default DrinkForm;
 
 DrinkForm.defaultProps = {
     options: { validate: true },
-    categories: ['Beer', 'Whisky'],
-    vol: [0.33, 0.5, 0.7, 1]
+    categories: [
+        'Absinthe',
+        'Beer',
+        'Brandy',
+        'Cider',
+        'Gin',
+        'Horilka',
+        'Liqueurs',
+        'Mastika',
+        'Metaxa',
+        'Ouzo',
+        'Rakia',
+        'Slivovitz',
+        'Rum',
+        'Sparkling Wine',
+        'Tequila',
+        'Vodka',
+        'Vermouth',
+        'Wine',
+        'Whisky',
+    ],
+    vol: [
+        0.25,
+        0.33,
+        0.5,
+        0.7,
+        1
+    ]
 };

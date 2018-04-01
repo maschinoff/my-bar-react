@@ -51,8 +51,7 @@ FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 2. Install heroku CLI https://devcenter.heroku.com/articles/heroku-cli
 3. Login to heroku `heroku login`
 4. Create app `heroku create my-bar-react`
-5. Upload & build to heroku `git push heroku master`
-6. Setup heroku varialbles
+5. Setup heroku varialbles for firebase
 ```
 heroku config:set FIREBASE_API_KEY=YOUR_API_KEY
 heroku config:set FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAI
@@ -61,6 +60,7 @@ heroku config:set FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
 heroku config:set FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
 heroku config:set FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 ```
+6. Upload & build to heroku `git push heroku master`
 7. Run app `heroku open`
 
 ## Roadmap
