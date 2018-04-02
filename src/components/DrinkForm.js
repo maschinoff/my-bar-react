@@ -234,7 +234,7 @@ DrinkForm.defaultProps = {
         0.7,
         0.75,
         1,
-        1,5,
+        1.5,
         5,
     ]
 };
