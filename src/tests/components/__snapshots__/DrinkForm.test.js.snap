@@ -72,12 +72,6 @@ exports[`should handle onSubmit with empty form 1`] = `
       Mastika
     </option>
     <option
-      key="Metaxa"
-      value="Metaxa"
-    >
-      Metaxa
-    </option>
-    <option
       key="Ouzo"
       value="Ouzo"
     >
@@ -161,10 +155,22 @@ exports[`should handle onSubmit with empty form 1`] = `
       0.33
     </option>
     <option
+      key="0.375"
+      value={0.375}
+    >
+      0.375
+    </option>
+    <option
       key="0.5"
       value={0.5}
     >
       0.5
+    </option>
+    <option
+      key="0.6"
+      value={0.6}
+    >
+      0.6
     </option>
     <option
       key="0.7"
@@ -173,10 +179,22 @@ exports[`should handle onSubmit with empty form 1`] = `
       0.7
     </option>
     <option
+      key="0.75"
+      value={0.75}
+    >
+      0.75
+    </option>
+    <option
       key="1"
       value={1}
     >
       1
+    </option>
+    <option
+      key="5"
+      value={5}
+    >
+      5
     </option>
   </select>
   <input
@@ -503,12 +521,6 @@ exports[`should render DrinkForm with data 1`] = `
       Mastika
     </option>
     <option
-      key="Metaxa"
-      value="Metaxa"
-    >
-      Metaxa
-    </option>
-    <option
       key="Ouzo"
       value="Ouzo"
     >
@@ -592,10 +604,22 @@ exports[`should render DrinkForm with data 1`] = `
       0.33
     </option>
     <option
+      key="0.375"
+      value={0.375}
+    >
+      0.375
+    </option>
+    <option
       key="0.5"
       value={0.5}
     >
       0.5
+    </option>
+    <option
+      key="0.6"
+      value={0.6}
+    >
+      0.6
     </option>
     <option
       key="0.7"
@@ -604,10 +628,22 @@ exports[`should render DrinkForm with data 1`] = `
       0.7
     </option>
     <option
+      key="0.75"
+      value={0.75}
+    >
+      0.75
+    </option>
+    <option
       key="1"
       value={1}
     >
       1
+    </option>
+    <option
+      key="5"
+      value={5}
+    >
+      5
     </option>
   </select>
   <input
@@ -934,12 +970,6 @@ exports[`should render empty DrinkForm correctly 1`] = `
       Mastika
     </option>
     <option
-      key="Metaxa"
-      value="Metaxa"
-    >
-      Metaxa
-    </option>
-    <option
       key="Ouzo"
       value="Ouzo"
     >
@@ -1023,10 +1053,22 @@ exports[`should render empty DrinkForm correctly 1`] = `
       0.33
     </option>
     <option
+      key="0.375"
+      value={0.375}
+    >
+      0.375
+    </option>
+    <option
       key="0.5"
       value={0.5}
     >
       0.5
+    </option>
+    <option
+      key="0.6"
+      value={0.6}
+    >
+      0.6
     </option>
     <option
       key="0.7"
@@ -1035,10 +1077,22 @@ exports[`should render empty DrinkForm correctly 1`] = `
       0.7
     </option>
     <option
+      key="0.75"
+      value={0.75}
+    >
+      0.75
+    </option>
+    <option
       key="1"
       value={1}
     >
       1
+    </option>
+    <option
+      key="5"
+      value={5}
+    >
+      5
     </option>
   </select>
   <input
