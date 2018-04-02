@@ -229,6 +229,7 @@ DrinkForm.defaultProps = {
     vol: [
         0.25,
         0.33,
+        0.375,
         0.5,
         0.7,
         0.75,
