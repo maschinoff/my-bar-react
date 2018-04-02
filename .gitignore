@@ -1,4 +1,5 @@
 .idea
+DB/
 node_modules/
 public/dist/
 .env.test
