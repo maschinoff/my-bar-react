@@ -5,41 +5,40 @@ exports[`should render single item correctly 1`] = `
   <Link
     className="list-item"
     replace={false}
-    to="/view/whisky"
+    to="/view/laphroaigh"
   >
     <div>
-      My bottle II
+      Laphroaig QA Cask Double Matured
       <br />
       Whisky
        - 
-      0.7
+      1
       L
     </div>
     <ul>
       <li>
-        42
+        40
         %
       </li>
       <li>
-        $0.00
+        $48.04
       </li>
       <li>
         Age: 
-        12
       </li>
     </ul>
     <ul>
       <li>
         Bought: 
-        January 1st, 1969
+        January 1st, 1968
       </li>
       <li>
         Bottled: 
-        January 1st, 1966
+        January 1st, 1964
       </li>
       <li>
         BBF: 
-        May 1st, 1970
+        November 1st, 1970
       </li>
     </ul>
   </Link>

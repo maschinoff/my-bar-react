@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { startRemoveDrink } from '../actions/drinks';
+import {
+    openDrink,
+    emptyDrink
+} from '../actions/drinks';
 
 export class DetailedView extends React.Component {
-    onRemove = () => {
-        this.props.startRemoveDrink(this.props.drink);
-        this.props.history.push('/');
+    onOpen = () => {
+        this.props.openDrink(this.props.drink);
+    }
+    onMakeEmpty = () => {
+        this.props.emptyDrink(this.props.drink);
     }
     render(){
         return(
@@ -18,7 +23,13 @@ export class DetailedView extends React.Component {
                                 <div className="content-container">
                                     <div className="page-header__actions">
                                         <Link className="button" to={`/edit/${this.props.drink.id}`}>Edit</Link>
-                                        <button className="button" onClick={this.onRemove}>Delete</button>
+                                        { !this.props.drink.isOpen ? (
+                                            <button id="openDrink" className="button" onClick={this.onOpen}>Open</button>
+                                        ) : (
+
+                                            !this.props.drink.isEmpty && <button id="emptyDrink" className="button" onClick={this.onMakeEmpty}>Empty</button>
+
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +58,8 @@ const mapStateToProps = (state, props) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    startRemoveDrink: (data) => dispatch(startRemoveDrink(data))
+        openDrink: (drink) => dispatch(openDrink(drink)),
+        emptyDrink: (drink) => dispatch(emptyDrink(drink))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailedView);

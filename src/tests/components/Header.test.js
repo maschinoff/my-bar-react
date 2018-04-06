@@ -5,8 +5,12 @@ import { Header } from '../../components/Header';
 let startLogout, wrapper;
 
 beforeEach (() => {
+    const userData = {
+        name: 'Mike',
+        photoURL: 'https://imgsome'
+    };
     startLogout = jest.fn();
-    wrapper = shallow(<Header startLogout={startLogout} />);
+    wrapper = shallow(<Header startLogout={startLogout} userData={userData} />);
 });
 
 test('should render Header correctly', () => {

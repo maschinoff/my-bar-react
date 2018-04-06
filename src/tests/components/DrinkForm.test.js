@@ -33,15 +33,18 @@ test('should handle onSubmit with correct filled form', () => {
     wrapper.find('form').simulate('submit', {
         preventDefault: () => {}
     });
+
     expect(wrapper.state('errors').length).toEqual(0);
+
     expect(onSubmit).toHaveBeenCalledWith({
         title: drinks[0].title,
         category: drinks[0].category,
-        vol: drinks[0].vol,
-        alc: drinks[0].alc,
+        vol: 0.7,
+        alc: 40,
         price: drinks[0].price,
         aged: drinks[0].aged,
         description: drinks[0].description,
+        madeIn: drinks[0].madeIn,
         isEmpty: drinks[0].isEmpty,
         isOpen: drinks[0].isOpen,
         boughtAt: drinks[0].boughtAt,

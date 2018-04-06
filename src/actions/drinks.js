@@ -22,8 +22,8 @@ export const startAddDrink = (drinkData = {}) => {
             boughtAt = 0,
             bottledAt = 0,
             bestBefore = 0,
-            createdAt = moment().valueOf(),
-            updatedAt = moment().valueOf()
+            createdAt = 0,
+            updatedAt = 0
         } = drinkData;
 
         const uid = getState().auth.uid;
@@ -54,6 +54,22 @@ export const startEditDrink = (id, updates) => {
         return database.ref(`users/${uid}/drinks/${id}`).update(updates).then(() => {
             dispatch(editDrink(id, updates));
         });
+    }
+};
+
+//OPEN DRINK
+export const openDrink = ({ id } = {}) => {
+    return (dispatch, getState) => {
+        const updates = { isOpen: true, openedAt: moment().valueOf() };
+        return dispatch(startEditDrink(id, updates));
+    }
+};
+
+//EMPTY DRINK
+export const emptyDrink = ( { id } = {}) => {
+    return (dispatch, getState) => {
+        const updates = { isEmpty: true, emptiedAt: moment().valueOf() };
+        return dispatch(startEditDrink(id, updates));
     }
 };
 

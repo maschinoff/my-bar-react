@@ -22,22 +22,59 @@ exports[`should render barList with data correctly 1`] = `
     className="list-body"
   >
     <DrinkListItem
-      aged={1}
-      alc={5.6}
-      bestBefore={10368000000}
-      bottledAt={-126230400000}
-      boughtAt={-31536000000}
+      aged="12 years"
+      alc={40}
+      bestBefore={26265600000}
+      bottledAt={-189388800000}
+      boughtAt={-63158400000}
+      category="Whisky"
+      createdAt={0}
+      description=""
+      id="cardhu"
+      isEmpty={false}
+      isOpen={false}
+      key="cardhu"
+      madeIn="Scotland"
+      price={5472}
+      title="Cardhu Speyside Single Malt Scotch Whisky"
+      updatedAt={0}
+      vol={0.7}
+    />
+    <DrinkListItem
+      aged=""
+      alc={40}
+      bestBefore={26265600000}
+      bottledAt={-189388800000}
+      boughtAt={-63158400000}
+      category="Whisky"
+      createdAt={0}
+      description=""
+      id="laphroaigh"
+      isEmpty={false}
+      isOpen={false}
+      key="laphroaigh"
+      price={4804}
+      title="Laphroaig QA Cask Double Matured"
+      updatedAt={0}
+      vol={1}
+    />
+    <DrinkListItem
+      aged=""
+      alc={5}
+      bestBefore={26265600000}
+      bottledAt={-189388800000}
+      boughtAt={-63158400000}
       category="Beer"
       createdAt={0}
       description=""
-      id="beer"
+      id="leffe"
       isEmpty={false}
-      isOpen={false}
-      key="beer"
-      price={450}
-      title="My bottle"
+      isOpen={true}
+      key="leffe"
+      price={11.12}
+      title="Leffe Ruby"
       updatedAt={0}
-      vol={0.5}
+      vol={0.25}
     />
     <DrinkListItem
       aged={12}
@@ -49,10 +86,10 @@ exports[`should render barList with data correctly 1`] = `
       createdAt={0}
       description=""
       id="whisky"
-      isEmpty={false}
+      isEmpty={true}
       isOpen={true}
       key="whisky"
-      price=""
+      price={12}
       title="My bottle II"
       updatedAt={0}
       vol={0.7}

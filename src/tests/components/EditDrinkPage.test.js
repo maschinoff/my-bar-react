@@ -33,3 +33,12 @@ test('should handle on submit', () => {
     expect(startEditDrink).toHaveBeenCalledWith(drinks[1].id, drinks[1]);
     expect(history.push).toHaveBeenCalledWith(`/view/${drinks[1].id}`);
 });
+
+test('should handle on delete', () => {
+    const startRemoveDrink = jest.fn();
+    const history = { push: jest.fn()};
+    const wrapper = shallow(<EditDrinkPage drink={drinks[1]} startRemoveDrink={startRemoveDrink} history={history} />);
+    wrapper.find('#remove').simulate('click');
+    expect(history.push).toHaveBeenCalledWith('/');
+    expect(startRemoveDrink).toHaveBeenCalledWith(drinks[1]);
+});

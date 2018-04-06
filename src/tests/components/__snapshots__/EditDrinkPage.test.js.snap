@@ -14,6 +14,13 @@ exports[`should render edit page correctly 1`] = `
         >
           Edit Drink
         </h1>
+        <button
+          className="button"
+          id="remove"
+          onClick={[Function]}
+        >
+          Delete
+        </button>
       </div>
     </div>
     <div
@@ -45,21 +52,21 @@ exports[`should render edit page correctly 1`] = `
         }
         drink={
           Object {
-            "aged": 12,
-            "alc": 42,
-            "bestBefore": 10368000000,
-            "bottledAt": -126230400000,
-            "boughtAt": -31536000000,
+            "aged": "",
+            "alc": 40,
+            "bestBefore": 26265600000,
+            "bottledAt": -189388800000,
+            "boughtAt": -63158400000,
             "category": "Whisky",
             "createdAt": 0,
             "description": "",
-            "id": "whisky",
+            "id": "laphroaigh",
             "isEmpty": false,
-            "isOpen": true,
-            "price": "",
-            "title": "My bottle II",
+            "isOpen": false,
+            "price": 4804,
+            "title": "Laphroaig QA Cask Double Matured",
             "updatedAt": 0,
-            "vol": 0.7,
+            "vol": 1,
           }
         }
         onSubmit={[Function]}
@@ -70,6 +77,8 @@ exports[`should render edit page correctly 1`] = `
         }
         vol={
           Array [
+            0.02,
+            0.2,
             0.25,
             0.33,
             0.375,
@@ -78,6 +87,7 @@ exports[`should render edit page correctly 1`] = `
             0.7,
             0.75,
             1,
+            1.5,
             5,
           ]
         }

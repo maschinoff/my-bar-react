@@ -1,6 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render detailed view correctly 1`] = `
+exports[`should render detailed view correctly with empty and without open button 1`] = `
+<div>
+  <div>
+    <div
+      className="page-header"
+    >
+      <div
+        className="content-container"
+      >
+        <div
+          className="page-header__actions"
+        >
+          <Link
+            className="button"
+            replace={false}
+            to="/edit/leffe"
+          >
+            Edit
+          </Link>
+          <button
+            className="button"
+            id="emptyDrink"
+            onClick={[Function]}
+          >
+            Empty
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="content-container"
+    >
+      <h1>
+        Leffe Ruby
+      </h1>
+      <ul>
+        <li>
+          Beer
+        </li>
+        <li>
+          0.25
+           L
+        </li>
+        <li>
+          5
+           %
+        </li>
+        <li>
+          11.12
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render detailed view correctly with open and without empty button 1`] = `
+<div>
+  <div>
+    <div
+      className="page-header"
+    >
+      <div
+        className="content-container"
+      >
+        <div
+          className="page-header__actions"
+        >
+          <Link
+            className="button"
+            replace={false}
+            to="/edit/laphroaigh"
+          >
+            Edit
+          </Link>
+          <button
+            className="button"
+            id="openDrink"
+            onClick={[Function]}
+          >
+            Open
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="content-container"
+    >
+      <h1>
+        Laphroaig QA Cask Double Matured
+      </h1>
+      <ul>
+        <li>
+          Whisky
+        </li>
+        <li>
+          1
+           L
+        </li>
+        <li>
+          40
+           %
+        </li>
+        <li>
+          4804
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render detailed view correctly without empty & open buttons 1`] = `
 <div>
   <div>
     <div
@@ -19,12 +131,6 @@ exports[`should render detailed view correctly 1`] = `
           >
             Edit
           </Link>
-          <button
-            className="button"
-            onClick={[Function]}
-          >
-            Delete
-          </button>
         </div>
       </div>
     </div>
@@ -46,7 +152,9 @@ exports[`should render detailed view correctly 1`] = `
           42
            %
         </li>
-        <li />
+        <li>
+          12
+        </li>
       </ul>
     </div>
   </div>

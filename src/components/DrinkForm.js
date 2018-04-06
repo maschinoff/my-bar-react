@@ -14,8 +14,11 @@ export class DrinkForm extends React.Component {
             price: props.drink ? (props.drink.price / 100).toString() : '',
             aged: props.drink ? props.drink.aged : '',
             description: props.drink ? props.drink.description : '',
-            isEmpty: props.drink ? props.drink.isEmpty : false,
+            madeIn: props.drink ? props.drink.madeIn : '',
             isOpen: props.drink ? props.drink.isEmpty : false,
+            openedAt: (props.drink && props.drink.openedAt) ? moment(props.drink.openedAt) : null,
+            isEmpty: props.drink ? props.drink.isEmpty : false,
+            emptiedAt: (props.drink && props.drink.emptiedAt) ? momemt(props.drink.emptiedAt) : null,
             boughtAt: (props.drink && props.drink.boughtAt) ? moment(props.drink.boughtAt) : null,
             bottledAt: (props.drink && props.drink.bottledAt) ? moment(props.drink.bottledAt) : null,
             bestBefore: props.drink ? moment(props.drink.bestBefore) : null,
@@ -60,12 +63,13 @@ export class DrinkForm extends React.Component {
                 price: this.state.price ? parseFloat(this.state.price, 10) * 100 : '',
                 aged: this.state.aged,
                 description: this.state.description,
+                madeIn: this.state.madeIn,
                 isEmpty: this.state.isEmpty,
                 isOpen: this.state.isOpen,
                 boughtAt: this.state.boughtAt ? this.state.boughtAt.valueOf() : null,
                 bottledAt: this.state.bottledAt ? this.state.bottledAt.valueOf() : null,
                 bestBefore: this.state.bestBefore.valueOf(),
-                createdAt: this.state.createdAt.valueOf(),
+                createdAt: this.state.createdAt ? this.state.createdAt.valueOf() : moment().valueOf(),
                 updatedAt: moment().valueOf()
             });
         }
@@ -92,6 +96,10 @@ export class DrinkForm extends React.Component {
 
             if (!this.state.price) {
                 errors.push('Please provide a price');
+            }
+
+            if (!this.state.madeIn) {
+                errors.push('Please provide a country of origin');
             }
         }
         if (!errors.length)
@@ -148,6 +156,14 @@ export class DrinkForm extends React.Component {
                     placeholder="Price"
                     value={this.state.price}
                     onChange={e => this.onFieldChange(e, 'price')}
+                />
+                <input
+                    type="text"
+                    id="madeIn"
+                    className="text-input"
+                    placeholder="Country of origin"
+                    value={this.state.madeIn}
+                    onChange={e => this.onFieldChange(e, 'madeIn')}
                 />
                 <input
                     type="text"
@@ -226,6 +242,8 @@ DrinkForm.defaultProps = {
         'Whisky',
     ],
     vol: [
+        0.02,
+        0.2,
         0.25,
         0.33,
         0.375,

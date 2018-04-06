@@ -50,6 +50,8 @@ exports[`should render AddDrinkPage correctly 1`] = `
       }
       vol={
         Array [
+          0.02,
+          0.2,
           0.25,
           0.33,
           0.375,
@@ -58,6 +60,7 @@ exports[`should render AddDrinkPage correctly 1`] = `
           0.7,
           0.75,
           1,
+          1.5,
           5,
         ]
       }

@@ -6,12 +6,15 @@ import {
     addDrink,
     startAddDrink,
     editDrink,
+    startEditDrink,
     removeDrink,
     startRemoveDrink,
+    openDrink,
+    emptyDrink,
     setDrinks,
-    startSetDrinks, startEditDrink
+    startSetDrinks,
 } from '../../actions/drinks';
-import moment from "moment/moment";
+import moment from 'moment';
 
 const uid = 'thisismytestuid';
 const defaultAuthState = { auth: { uid }};
@@ -53,8 +56,8 @@ test('should add drink object to database and store', (done) => {
         boughtAt: 0,
         bottledAt: 0,
         bestBefore: 0,
-        createdAt: moment().valueOf(),
-        updatedAt:  moment().valueOf()
+        createdAt: 0,
+        updatedAt:  0
     };
 
     store.dispatch(startAddDrink(drinkData)).then(() => {
@@ -178,6 +181,59 @@ test('should delete record from firebase', (done) => {
         });
     });
 });
+
+test('should open drink in firebase', (done) => {
+    const store = createMockStore(defaultAuthState);
+    const id = drinks[0].id;
+    const updates = { isOpen: true, openedAt: expect.any(Number) };
+
+    store.dispatch(openDrink({ id })).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'EDIT_DRINK',
+            id,
+            updates
+        });
+
+        return database.ref(`users/${uid}/drinks/${actions[0].id}`).once('value').then((snapshot) => {
+            expect({
+                id: expect.any(String),
+                ...snapshot.val(),
+            }).toEqual({
+                ...drinks[0],
+                ...updates
+            });
+            done();
+        });
+    });
+});
+
+test('should empty bottle in firebase', (done) => {
+    const store = createMockStore(defaultAuthState);
+    const id = drinks[2].id;
+    const updates = { isEmpty: true, emptiedAt: expect.any(Number) };
+
+    store.dispatch(emptyDrink( { id })).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+           type: 'EDIT_DRINK',
+           id,
+           updates
+        });
+
+        return database.ref(`users/${uid}/drinks/${actions[0].id}`).once('value').then((snapshot) => {
+           expect({
+               id: expect.any(String),
+               ...snapshot.val(),
+           }).toEqual({
+               ...drinks[2],
+               ...updates
+           })
+        });
+        done();
+    });
+});
+
 
 test('should generate set drinks action object', () => {
     const action = setDrinks(drinks);

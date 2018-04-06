@@ -1,13 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import DrinkForm from '../components/DrinkForm';
-import { startEditDrink } from '../actions/drinks';
+import {startEditDrink, startRemoveDrink} from '../actions/drinks';
 
 export class EditDrinkPage extends React.Component {
+    onRemove = () => {
+        this.props.startRemoveDrink(this.props.drink);
+        this.props.history.push('/');
+    }
     onSubmit = (drink) => {
         this.props.startEditDrink(this.props.drink.id, drink);
         this.props.history.push(`/view/${this.props.drink.id}`);
-    };
+    }
     render(){
         return (
             <div>
@@ -17,6 +21,7 @@ export class EditDrinkPage extends React.Component {
                             <div className="page-header">
                                 <div className="content-container">
                                     <h1 className="page-header__title">Edit Drink</h1>
+                                    <button id="remove" className="button" onClick={this.onRemove}>Delete</button>
                                 </div>
                             </div>
                             <div className="content-container">
@@ -38,7 +43,8 @@ export class EditDrinkPage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    startEditDrink: (id, updates) => dispatch(startEditDrink(id, updates))
+    startEditDrink: (id, updates) => dispatch(startEditDrink(id, updates)),
+    startRemoveDrink: (data) => dispatch(startRemoveDrink(data))
 });
 
 const mapStateToProps = (state, props) => ({

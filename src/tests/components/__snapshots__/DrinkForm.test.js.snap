@@ -143,6 +143,18 @@ exports[`should handle onSubmit with empty form 1`] = `
       -- Please select --
     </option>
     <option
+      key="0.02"
+      value={0.02}
+    >
+      0.02
+    </option>
+    <option
+      key="0.2"
+      value={0.2}
+    >
+      0.2
+    </option>
+    <option
       key="0.25"
       value={0.25}
     >
@@ -191,6 +203,12 @@ exports[`should handle onSubmit with empty form 1`] = `
       1
     </option>
     <option
+      key="1.5"
+      value={1.5}
+    >
+      1.5
+    </option>
+    <option
       key="5"
       value={5}
     >
@@ -209,6 +227,14 @@ exports[`should handle onSubmit with empty form 1`] = `
     id="price"
     onChange={[Function]}
     placeholder="Price"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    id="madeIn"
+    onChange={[Function]}
+    placeholder="Country of origin"
     type="text"
     value=""
   />
@@ -460,12 +486,12 @@ exports[`should render DrinkForm with data 1`] = `
     onChange={[Function]}
     placeholder="Title"
     type="text"
-    value="My bottle"
+    value="Cardhu Speyside Single Malt Scotch Whisky"
   />
   <select
     className="select"
     onChange={[Function]}
-    value="Beer"
+    value="Whisky"
   >
     <option
       value=""
@@ -584,12 +610,24 @@ exports[`should render DrinkForm with data 1`] = `
   <select
     className="select"
     onChange={[Function]}
-    value={0.5}
+    value={0.7}
   >
     <option
       value=""
     >
       -- Please select --
+    </option>
+    <option
+      key="0.02"
+      value={0.02}
+    >
+      0.02
+    </option>
+    <option
+      key="0.2"
+      value={0.2}
+    >
+      0.2
     </option>
     <option
       key="0.25"
@@ -640,6 +678,12 @@ exports[`should render DrinkForm with data 1`] = `
       1
     </option>
     <option
+      key="1.5"
+      value={1.5}
+    >
+      1.5
+    </option>
+    <option
       key="5"
       value={5}
     >
@@ -651,7 +695,7 @@ exports[`should render DrinkForm with data 1`] = `
     onChange={[Function]}
     placeholder="Alcohol"
     type="text"
-    value={5.6}
+    value={40}
   />
   <input
     className="text-input"
@@ -659,14 +703,22 @@ exports[`should render DrinkForm with data 1`] = `
     onChange={[Function]}
     placeholder="Price"
     type="text"
-    value="4.5"
+    value="54.72"
+  />
+  <input
+    className="text-input"
+    id="madeIn"
+    onChange={[Function]}
+    placeholder="Country of origin"
+    type="text"
+    value="Scotland"
   />
   <input
     className="text-input"
     onChange={[Function]}
     placeholder="Specify aged of drink (optional)"
     type="text"
-    value={1}
+    value="12 years"
   />
   <textarea
     className="text-area"
@@ -678,7 +730,7 @@ exports[`should render DrinkForm with data 1`] = `
     anchorDirection="left"
     customCloseIcon={null}
     customInputIcon={null}
-    date={"1969-01-01T00:00:00.000Z"}
+    date={"1968-01-01T00:00:00.000Z"}
     daySize={39}
     disabled={false}
     displayFormat={[Function]}
@@ -750,7 +802,7 @@ exports[`should render DrinkForm with data 1`] = `
     anchorDirection="left"
     customCloseIcon={null}
     customInputIcon={null}
-    date={"1966-01-01T00:00:00.000Z"}
+    date={"1964-01-01T00:00:00.000Z"}
     daySize={39}
     disabled={false}
     displayFormat={[Function]}
@@ -822,7 +874,7 @@ exports[`should render DrinkForm with data 1`] = `
     anchorDirection="left"
     customCloseIcon={null}
     customInputIcon={null}
-    date={"1970-05-01T00:00:00.000Z"}
+    date={"1970-11-01T00:00:00.000Z"}
     daySize={39}
     disabled={false}
     displayFormat={[Function]}
@@ -1041,6 +1093,18 @@ exports[`should render empty DrinkForm correctly 1`] = `
       -- Please select --
     </option>
     <option
+      key="0.02"
+      value={0.02}
+    >
+      0.02
+    </option>
+    <option
+      key="0.2"
+      value={0.2}
+    >
+      0.2
+    </option>
+    <option
       key="0.25"
       value={0.25}
     >
@@ -1089,6 +1153,12 @@ exports[`should render empty DrinkForm correctly 1`] = `
       1
     </option>
     <option
+      key="1.5"
+      value={1.5}
+    >
+      1.5
+    </option>
+    <option
       key="5"
       value={5}
     >
@@ -1107,6 +1177,14 @@ exports[`should render empty DrinkForm correctly 1`] = `
     id="price"
     onChange={[Function]}
     placeholder="Price"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    id="madeIn"
+    onChange={[Function]}
+    placeholder="Country of origin"
     type="text"
     value=""
   />

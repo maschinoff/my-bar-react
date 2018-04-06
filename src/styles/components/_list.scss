@@ -64,3 +64,11 @@
     padding-left: $s-size;
   }
 }
+
+.list-item--opened {
+  background: darkgreen;
+}
+
+.list-item--empty {
+  background: firebrick;
+}

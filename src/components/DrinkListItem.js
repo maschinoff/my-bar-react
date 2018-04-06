@@ -7,10 +7,11 @@ export const DrinkListItem = ({
                                   id, title,
                                   category, vol,
                                   alc, price, aged,
-                                  boughtAt, bottledAt, bestBefore
+                                  isOpen, isEmpty,
+                                  boughtAt, bottledAt, bestBefore,
                               }) => (
     <div>
-        <Link className="list-item" to={`/view/${id}`}>
+        <Link className={`list-item ${isOpen ? 'list-item--opened' : ''} ${isEmpty ? 'list-item--empty' : ''}`} to={`/view/${id}`}>
             <div>
                 {title}
                 <br/>

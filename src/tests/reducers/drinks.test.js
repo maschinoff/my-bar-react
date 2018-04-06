@@ -1,6 +1,6 @@
 import drinksReducers from '../../reducers/drinks';
 import drinks from '../fixtures/drinks';
-import moment from "moment/moment";
+import moment from 'moment';
 
 test('should set default drinks values', () => {
     const state = drinksReducers(undefined, { type: '@@INIT'});
@@ -88,7 +88,7 @@ test('should remove a drink by id', () => {
     }
 
     const state = drinksReducers(drinks, action);
-    expect(state).toEqual([drinks[1]]);
+    expect(state).toEqual([drinks[1], drinks[2], drinks[3]]);
 });
 
 test('should not remove a drink if not found', () => {
