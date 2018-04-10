@@ -18,6 +18,16 @@ exports[`should render BarSummary with multiple records correctly 1`] = `
       bottles
        in your bar.
     </h1>
+    <div>
+      It's total 
+      99.90
+       liters of drinks.
+    </div>
+    <div>
+      Total cost is 
+      $6,789.99
+      .
+    </div>
     <div
       className="page-header__actions"
     >
@@ -51,6 +61,16 @@ exports[`should render BarSummary with one record correctly 1`] = `
       bottle
        in your bar.
     </h1>
+    <div>
+      It's total 
+      1.00
+       liters of drinks.
+    </div>
+    <div>
+      Total cost is 
+      $1.00
+      .
+    </div>
     <div
       className="page-header__actions"
     >
