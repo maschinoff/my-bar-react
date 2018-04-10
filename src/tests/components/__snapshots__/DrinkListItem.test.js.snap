@@ -3,7 +3,7 @@
 exports[`should render single item correctly 1`] = `
 <div>
   <Link
-    className="list-item"
+    className="list-item  "
     replace={false}
     to="/view/laphroaigh"
   >

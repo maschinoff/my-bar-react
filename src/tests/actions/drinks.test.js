@@ -228,9 +228,9 @@ test('should empty bottle in firebase', (done) => {
            }).toEqual({
                ...drinks[2],
                ...updates
-           })
+           });
+           done();
         });
-        done();
     });
 });
 
