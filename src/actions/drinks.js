@@ -17,6 +17,7 @@ export const startAddDrink = (drinkData = {}) => {
             price = '',
             aged = '',
             description = '',
+            madeIn = '',
             isEmpty = false,
             isOpen = false,
             boughtAt = 0,
@@ -28,7 +29,7 @@ export const startAddDrink = (drinkData = {}) => {
 
         const uid = getState().auth.uid;
         const drink = {
-            title, category, vol, alc, price, aged, description, isEmpty, isOpen, boughtAt, bottledAt, bestBefore, createdAt, updatedAt
+            title, category, vol, alc, price, aged, description, madeIn, isEmpty, isOpen, boughtAt, bottledAt, bestBefore, createdAt, updatedAt
         };
 
         return database.ref(`users/${uid}/drinks`).push(drink).then((ref) => {

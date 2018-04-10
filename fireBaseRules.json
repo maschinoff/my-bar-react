@@ -1,0 +1,47 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$user_id": {
+        ".read": "$user_id === auth.uid",
+        ".write": "$user_id === auth.uid",
+        "drinks": {
+          "$drink_id": {
+            ".validate": "newData.hasChildren(['title', 'category', 'vol', 'alc', 'price', 'madeIn', 'createdAt', 'updatedAt'])",
+            "title": {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "category": {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "vol": {
+              ".validate": "newData.isNumber()"
+            },
+            "alc": {
+              ".validate": "newData.isNumber()"
+            },
+            "price": {
+              ".validate": "newData.isNumber()"
+            },
+            "madeIn": {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "editedAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "$other": {
+              ".validate": false
+            }
+          }
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    }
+  }
+}

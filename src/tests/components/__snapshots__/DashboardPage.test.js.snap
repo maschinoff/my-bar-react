@@ -3,6 +3,7 @@
 exports[`should render DashboardPage correctly 1`] = `
 <div>
   <Connect(BarSummary) />
+  <Connect(DrinksListFilters) />
   <Connect(BarList) />
 </div>
 `;

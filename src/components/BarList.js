@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import selectDrinks from '../selectors/drinks';
 import DrinkListItem from '../components/DrinkListItem';
 
 export const BarList = (props) => (
@@ -27,7 +28,7 @@ export const BarList = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-        drinks: state.drinks
+        drinks: selectDrinks(state.drinks, state.drinksFilters)
     };
 };
 

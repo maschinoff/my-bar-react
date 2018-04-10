@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import selectDrinks from '../selectors/drinks';
+
 export const BarSummary = ({ bottlesCount }) => {
     const bottlesWord = bottlesCount === 1 ? 'bottle' : 'bottles';
 
@@ -20,9 +22,10 @@ export const BarSummary = ({ bottlesCount }) => {
 };
 
 const mapStateToProps = (state) => {
+    const viewedDrinks = selectDrinks(state.drinks, state.drinksFilters);
     return {
-        drinks: state.drinks,
-        bottlesCount: state.drinks.length
+        drinks: viewedDrinks,
+        bottlesCount: viewedDrinks.length
     };
 };
 
