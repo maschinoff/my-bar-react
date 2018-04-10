@@ -70,7 +70,14 @@ heroku config:set FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 * Delete existing drinks (resolved)
 * View list of all drink (resolved)
 * Detailed view (resolved)
-* Confirmation on delete
+
 ### Q2 2018
-* Sort by categories
-* Sort by best before 
+* Search by title (resolved)
+* Search by categories
+* Liters summary (resolved)
+* Cost summary (resolved)
+* Sort by best before
+* Confirmation on delete
+* Confirmation on open
+* Confirmation on emptied
+
