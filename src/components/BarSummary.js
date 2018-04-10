@@ -20,8 +20,7 @@ export const BarSummary = ({ bottlesCount, litersTotal, costTotal }) => {
                 <h1 className="page-header__title">
                     You have total <span>{bottlesCount}</span> {bottlesWord} in your bar.
                 </h1>
-                <div>It's total {formattedLitersTotal} liters of drinks.</div>
-                <div>Total cost is {formattedCostTotal}.</div>
+                <div>It's total {formattedLitersTotal} liters of drinks. Total cost is {formattedCostTotal}.</div>
                 <div className="page-header__actions">
                     <Link className="button" to="/create">Add Drink</Link>
                 </div>
