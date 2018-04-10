@@ -6,7 +6,7 @@ It allows you to easily manage your bar.
 Application was developed to practise with React and Firebase development workflow.
 
 ## Prerequisites
-The following list of tools that must be installed localy to run Portal:
+The following list of tools that must be installed locally to run app:
 
 * NodeJS
 * Yarn
@@ -19,10 +19,7 @@ Create new folder and run in terminal `git clone git@github.com:maschin/my-bar-r
 1. Create test and development database in firebase
 2. Enable G+ authentication: Authentication/SIGN-IN METHODS/Google/Enable
 3. Setup both test and development database rules: Database/RULES
-
-```
-TODO
-```
+4. Dev and Live firebase rules are in `firebaseRules.json`
 
 ### Client
 1. Open a terminal and run `yarn install`
