@@ -21,10 +21,7 @@ exports[`should render BarSummary with multiple records correctly 1`] = `
     <div>
       It's total 
       99.90
-       liters of drinks.
-    </div>
-    <div>
-      Total cost is 
+       liters of drinks. Total cost is 
       $6,789.99
       .
     </div>
@@ -64,10 +61,7 @@ exports[`should render BarSummary with one record correctly 1`] = `
     <div>
       It's total 
       1.00
-       liters of drinks.
-    </div>
-    <div>
-      Total cost is 
+       liters of drinks. Total cost is 
       $1.00
       .
     </div>
