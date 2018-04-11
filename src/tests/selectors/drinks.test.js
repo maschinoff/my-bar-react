@@ -3,7 +3,8 @@ import drinks from '../fixtures/drinks';
 
 test('should filter by text value', () => {
     const filters = {
-        text: 'Laphroaig  '
+        text: 'Laphroaig  ',
+        category: ''
     };
 
     const result = selectDrinks(drinks, filters);
@@ -13,10 +14,22 @@ test('should filter by text value', () => {
 
 test('should filter by category/text value', () => {
    const filters = {
-       text: 'whisky'
+       text: 'whisky',
+       category: ''
    };
 
    const result = selectDrinks(drinks, filters);
 
    expect(result).toEqual([drinks[0], drinks[1], drinks[3]]);
+});
+
+test('should filter by category', () => {
+    const filters = {
+        text: '',
+        category: 'beer'
+    };
+
+    const result = selectDrinks(drinks, filters);
+
+    expect(result).toEqual([drinks[2]]);
 });

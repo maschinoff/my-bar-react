@@ -132,7 +132,7 @@ export class DrinkForm extends React.Component {
                     {this.props.categories.map((category) => <option key={category}
                                                                      value={category}>
                         {category}
-                        </option>)}
+                    </option>)}
                 </select>
                 <select
                     className="select"

@@ -61,16 +61,18 @@ heroku config:set FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER
 7. Run app `heroku open`
 
 ## Roadmap
-### Q1 2018
+### Q1 2018 - 28h
 * Add new drink (resolved)
 * Edit existing drinks (resolved)
 * Delete existing drinks (resolved)
 * View list of all drink (resolved)
 * Detailed view (resolved)
+* Highlight opened and emptied drinks (resolved)
 
-### Q2 2018
+### Q2 2018 - 5h
 * Search by title (resolved)
-* Search by categories
+* Search by categories (resolved)
+* Search by state
 * Liters summary (resolved)
 * Cost summary (resolved)
 * Sort by best before
