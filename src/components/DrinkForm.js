@@ -15,7 +15,7 @@ export class DrinkForm extends React.Component {
             aged: props.drink ? props.drink.aged : '',
             description: props.drink ? props.drink.description : '',
             madeIn: props.drink ? props.drink.madeIn : '',
-            isOpen: props.drink ? props.drink.isEmpty : false,
+            isOpen: props.drink ? props.drink.isOpen : false,
             openedAt: (props.drink && props.drink.openedAt) ? moment(props.drink.openedAt) : null,
             isEmpty: props.drink ? props.drink.isEmpty : false,
             emptiedAt: (props.drink && props.drink.emptiedAt) ? momemt(props.drink.emptiedAt) : null,
