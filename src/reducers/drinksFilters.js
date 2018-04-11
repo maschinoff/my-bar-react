@@ -1,6 +1,7 @@
 const drinksFiltersReducerDefaultState = {
     text: '',
     category: '',
+    status: 'Full',
     sortBy: 'dateBought',
 }
 
@@ -16,6 +17,11 @@ export default (state = drinksFiltersReducerDefaultState, action) => {
                 ...state,
                 category: action.category
             };
+        case 'SET_STATUS_FILTER':
+            return {
+                ...state,
+                status: action.status
+            }
         default:
             return state;
     }

@@ -4,16 +4,18 @@ import { shallow } from 'enzyme';
 import { DrinksListFilters } from '../../components/DrinksListFilters';
 import { drinksFilters } from '../fixtures/drinksFilters';
 
-let setTextFilter, setCategoryFilter, wrapper;
+let setTextFilter, setCategoryFilter, setStatusFilter, wrapper;
 
 beforeEach(() => {
    setTextFilter = jest.fn();
    setCategoryFilter = jest.fn();
+   setStatusFilter = jest.fn();
    wrapper = shallow(
        <DrinksListFilters
            drinksFilters={drinksFilters}
            setTextFilter={setTextFilter}
            setCategoryFilter={setCategoryFilter}
+           setStatusFilter={setStatusFilter}
        />
    )
 });
@@ -38,4 +40,13 @@ test('should handle on category change filter', () => {
    });
 
    expect(setCategoryFilter).toHaveBeenCalledWith(value);
+});
+
+test('should handle on status change filter', () => {
+   const value = 'Opened';
+   wrapper.find('select').at(1).simulate('change', {
+       target: { value }
+   });
+
+   expect(setStatusFilter).toHaveBeenCalledWith(value);
 });

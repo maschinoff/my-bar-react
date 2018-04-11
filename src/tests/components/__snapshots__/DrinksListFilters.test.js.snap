@@ -140,6 +140,38 @@ exports[`should render empty DrinksListFilters correctly 1`] = `
         </option>
       </select>
     </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+          -- All --
+        </option>
+        <option
+          key="Full"
+          value="Full"
+        >
+          Full
+        </option>
+        <option
+          key="Opened"
+          value="Opened"
+        >
+          Opened
+        </option>
+        <option
+          key="Emptied"
+          value="Emptied"
+        >
+          Emptied
+        </option>
+      </select>
+    </div>
   </div>
 </div>
 `;

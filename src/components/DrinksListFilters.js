@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {
     setTextFilter,
-    setCategoryFilter
+    setCategoryFilter,
+    setStatusFilter
 } from '../actions/drinksFilters';
 
 
@@ -12,6 +13,9 @@ export class DrinksListFilters extends React.Component {
     }
     onCategoryChange = (e) => {
         this.props.setCategoryFilter(e.target.value);
+    }
+    onStatusChange = (e) => {
+        this.props.setStatusFilter(e.target.value);
     }
     render() {
         return (
@@ -41,6 +45,21 @@ export class DrinksListFilters extends React.Component {
                                 </option>)}
                         </select>
                     </div>
+                    <div className="input-group__item">
+                        <select
+                            className="select"
+                            value={this.props.drinksFilters.status}
+                            onChange={this.onStatusChange}
+                        >
+                            <option value=''>-- All --</option>
+                            {this.props.statuses.map((status) =>
+                                <option
+                                    key={status}
+                                    value={status}>
+                                    {status}
+                                </option>)}
+                        </select>
+                    </div>
                 </div>
             </div>
         )
@@ -67,6 +86,11 @@ DrinksListFilters.defaultProps = {
         'Vermouth',
         'Wine',
         'Whisky',
+    ],
+    statuses: [
+        'Full',
+        'Opened',
+        'Emptied',
     ]
 }
 
@@ -78,7 +102,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
     setTextFilter: (text) => dispatch(setTextFilter(text)),
-    setCategoryFilter: (value) => dispatch(setCategoryFilter(value))
+    setCategoryFilter: (value) => dispatch(setCategoryFilter(value)),
+    setStatusFilter: (value) => dispatch(setStatusFilter(value))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DrinksListFilters);
