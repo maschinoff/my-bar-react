@@ -17,10 +17,10 @@
 
 .list-item {
   border: 1px solid darken($off-white, 7%);
-  border-top: none;
   color: $dark-grey;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: $s-size;
   text-decoration: none;
   transition: background .3s ease;
@@ -48,12 +48,52 @@
 
 .list-item__title {
   margin: 0;
+  width: 100%;
   word-break: break-all;
+  text-align: center;
+  font-size: $font-size-header;
+  background: rgba(134, 134, 134, 0.2);
+  padding: 4px;
 }
 
-.list-item__subtitle {
-  color: $grey;
+.list-item__description {
+  width: 100%;
   font-size: $font-size-small;
+  font-style: italic;
+}
+
+.list-item__type {
+  font-size: $font-size-large;
+  text-align: center;
+}
+
+.list-item__params {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.list-item__param__item {
+  border: 1px solid #666;
+  color: black;
+  font-size: $font-size-small;
+  font-weight: 300;
+  line-height: 1;
+  padding: $s-size;
+  text-decoration: none;
+}
+
+.list-item__date {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.list-item__date__item {
+  font-size: $font-size-extra-small;
 }
 
 .list-item__data {

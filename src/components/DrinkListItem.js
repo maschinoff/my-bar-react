@@ -7,26 +7,32 @@ export const DrinkListItem = ({
                                   id, title,
                                   category, vol,
                                   alc, price, aged,
+                                  description,
                                   isOpen, isEmpty,
                                   boughtAt, bottledAt, bestBefore,
                               }) => (
     <div>
         <Link className={`list-item ${isOpen ? 'list-item--opened' : ''} ${isEmpty ? 'list-item--empty' : ''}`} to={`/view/${id}`}>
-            <div>
+            <div className={'list-item__title'}>
                 {title}
-                <br/>
-                {category} - {vol}L
             </div>
-            <ul>
-                <li>{alc}%</li>
-                <li>{numeral(price/100).format('$0,0.00')}</li>
-                <li>Age: {aged}</li>
+            <div className={'list-item__type'}>
+                {category}
+            </div>
+            <ul className={'list-item__params'}>
+                <li className={'list-item__param__item'}>{alc}%</li>
+                <li className={'list-item__param__item'}>{numeral(price/100).format('$0,0.00')}</li>
+                <li className={'list-item__param__item'}>Age: {aged}</li>
+                <li className={'list-item__param__item'}>{vol}L</li>
             </ul>
-            <ul>
-                <li>Bought: {moment(boughtAt).format('MMMM Do, YYYY')}</li>
-                <li>Bottled: {moment(bottledAt).format('MMMM Do, YYYY')}</li>
-                <li>BBF: {moment(bestBefore).format('MMMM Do, YYYY')}</li>
+            <ul className={'list-item__date'}>
+                <li className={'list-item__date__item'}>Bought: {moment(boughtAt).format('MMMM Do, YYYY')}</li>
+                <li className={'list-item__date__item'}>Bottled: {moment(bottledAt).format('MMMM Do, YYYY')}</li>
+                <li className={'list-item__date__item'}>BBF: {moment(bestBefore).format('MMMM Do, YYYY')}</li>
             </ul>
+            <div className={'list-item__description'}>
+                {description}
+            </div>
         </Link>
     </div>
 );
