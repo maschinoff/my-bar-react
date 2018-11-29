@@ -21,7 +21,7 @@ export class DrinksListFilters extends React.Component {
         return (
             <div className="content-container">
                 <div className="input-group">
-                    <div className="input-group__item">
+                    <div className="input-group__item search">
                         <input
                             type="text"
                             className="text-input"
