@@ -52,6 +52,4 @@ export const DrinkListItem = ({
     </div>
 );
 
-
-
 export default DrinkListItem;

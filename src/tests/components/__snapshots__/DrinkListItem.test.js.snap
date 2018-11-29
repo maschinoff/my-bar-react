@@ -7,40 +7,162 @@ exports[`should render single item correctly 1`] = `
     replace={false}
     to="/view/laphroaigh"
   >
-    <div>
+    <div
+      className="list-item__title"
+    >
       Laphroaig QA Cask Double Matured
-      <br />
-      Whisky
-       - 
-      1
-      L
     </div>
-    <ul>
-      <li>
+    <div
+      className="list-item__type"
+    >
+      <Component
+        code=""
+        fallback={
+          <span>
+            Unknown
+          </span>
+        }
+        height="32"
+      />
+       
+      <div>
+        Whisky
+      </div>
+    </div>
+    <ul
+      className="list-item__params"
+    >
+      <li
+        className="list-item__param__item"
+      >
+        1
+        L
+      </li>
+      <li
+        className="list-item__param__item"
+      >
         40
         %
       </li>
-      <li>
+      <li
+        className="list-item__param__item"
+      >
         $48.04
       </li>
-      <li>
-        Age: 
+      <li
+        className="list-item__param__item"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Array [
+              "fal",
+              "clock",
+            ]
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+         
+        N/A
       </li>
     </ul>
-    <ul>
-      <li>
-        Bought: 
+    <ul
+      className="list-item__date"
+    >
+      <li
+        className="list-item__date__item"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Array [
+              "fal",
+              "shopping-cart",
+            ]
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+         
         January 1st, 1968
       </li>
-      <li>
-        Bottled: 
+      <li
+        className="list-item__date__item"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon="wine-bottle"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+         
         January 1st, 1964
       </li>
-      <li>
-        BBF: 
+      <li
+        className="list-item__date__item"
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon="flag-checkered"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+         
         November 1st, 1970
       </li>
     </ul>
+    <div
+      className="list-item__description"
+    />
   </Link>
 </div>
 `;
