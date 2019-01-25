@@ -29,6 +29,8 @@ const jsx = (
   </Provider>
 );
 
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
+
 let hasRendered = false;
 const renderApp = () => {
     if(!hasRendered){
@@ -36,8 +38,6 @@ const renderApp = () => {
         hasRendered = true;
     }
 };
-
-ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if(user){
